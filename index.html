@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Solicitud de Turno</title>
+
+   <!--  archivo de SweetAlert 2 -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+   <!--  archivo de Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body class="container mt-5">
+
+   <div>
+      <h1 class="mb-4">Hola, Por favor ingrese su información en los siguientes datos</h1>
+
+      <form id="turnoForm" class="needs-validation" novalidate>
+         <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+         </div>
+
+         <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" class="form-control" id="apellido" name="apellido" required>
+         </div>
+
+         <div class="form-group">
+            <label for="dia">Día(Lunes a viernes):</label>
+            <input type="text" class="form-control" id="dia" name="dia" required>
+         </div>
+
+         <div class="form-group">
+            <label for="hora">Hora(de 1 a 5):</label>
+            <input type="number" class="form-control" id="hora" name="hora" required>
+            <div class="invalid-feedback">Número de horario no válido. Debe ser un número entre 1 y 5.</div>
+         </div>
+
+         <button type="submit" class="btn btn-primary">Solicitar Turno</button>
+      </form>
+   </div>
+
+   <ul id="listaTurnos" class="mt-4"></ul>
+
+   <!-- Importa el script principal -->
+   <script type="module" src="main.js"></script>
+
+   <!-- archivo de Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
